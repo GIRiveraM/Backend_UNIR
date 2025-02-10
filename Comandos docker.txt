@@ -1,0 +1,17 @@
+Docker MySQL
+-- crea contanedor
+docker run -d --name SrvMySQLUNIR -e MYSQL_ROOT_PASSWORD=[Tu password] -e MYSQL_DATABASE=[nombre de la base de datos] -e MYSQL_USER=[Tu usuario] -e MYSQL_PASSWORD=[Tu password] -p 3306:3306 -v [Ruta para hacer recurrente la BD]:/var/lib/mysql --restart unless-stopped mysql:latest
+-- detener 
+docker stop SrvMySQL
+-- iniciar 
+docker start SrvMySQL
+
+Docker Postgres
+-- crear contenedor
+docker run -d --name SrvPOSTGRESUNIR -e POSTGRES_DB=[nombre de la base de datos] -e POSTGRES_USER=admin  -e POSTGRES_PASSWORD=[Tu password] -p 5432:5432 -v [Ruta para hacer recurrente la BD]:/var/lib/postgresql/data --restart unless-stopped postgres:latest
+-- Detener 
+docker stop SrvPOSTGRES
+-- Iniciar
+docker start SrvPOSTGRES
+
+
